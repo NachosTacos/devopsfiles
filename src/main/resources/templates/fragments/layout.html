@@ -1,0 +1,41 @@
+<div th:fragment="head">
+
+    <head>
+        <title>Canary App</title>
+        <link rel="stylesheet" th:href="@{/bootstrap/dist/css/bootstrap.css}" />
+        <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+    </head>
+</div>
+
+<div th:fragment="header">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"
+            xmlns:th="http://www.thymeleaf.org">
+            <div class="container">
+                <a class="navbar-brand">Java Spring Canary Application</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link text-dark">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="users" class="nav-link text-dark">Users</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+</div>
+
+<div th:fragment="footer">
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2019 - Canary App - <a>Privacy</a>
+        </div>
+    </footer>
+</div>

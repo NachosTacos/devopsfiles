@@ -1,0 +1,35 @@
+<div th:fragment="details">
+
+    <div>
+        <h4>User</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                First Name
+            </dt>
+            <dd class="col-sm-10">
+                <span th:text="${user.firstName}"></span>
+            </dd>
+            <dt class="col-sm-2">
+                Last Name
+            </dt>
+            <dd class="col-sm-10">
+                <span th:text="${user.lastName}"></span>
+            </dd>
+            <dt class="col-sm-2">
+                Email
+            </dt>
+            <dd class="col-sm-10">
+                <span th:text="${user.email}"></span>
+            </dd>
+            <dt class="col-sm-2">
+                Password
+            </dt>
+            <dd class="col-sm-10">
+                •••••
+            </dd>
+        </dl>
+
+
+    </div>
+</div>

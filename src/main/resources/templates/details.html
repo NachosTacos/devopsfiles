@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<div th:replace="fragments/layout :: head"></div>
+
+<body>
+    <div th:replace="fragments/layout :: header"></div>
+
+    <div class="container">
+        <h1>Details</h1>
+
+        <div th:replace="fragments/user :: details"></div>
+
+        <form action="#" th:href="@{/delete?id=${user.id}}" method="post">
+            <a href="users">Back to List</a>
+        </form>
+    </div>
+
+    <div th:replace="fragments/layout :: footer"></div>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<div th:replace="fragments/layout :: head"></div>
+
+<body>
+    <div th:replace="fragments/layout :: header"></div>
+
+    <div class="container">
+        <h1>Index</h1>
+
+        <p>
+            <a href="create">Create New</a>
+        </p>
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th> First Name </th>
+                        <th> Last Name </th>
+                        <th> Email </th>
+                        <th> Password </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:if="${users.empty}">
+                        <td colspan="2"> No Users Found </td>
+                    </tr>
+                    <tr th:each="user : ${users}">
+                        <td><span th:text="${user.firstName}"> First Name </span></td>
+                        <td><span th:text="${user.lastName}"> Last Name </span></td>
+                        <td><span th:text="${user.email}"> Email </span></td>
+                        <td><span> ••••• </span></td>
+                        <td>
+                            <a th:href="@{'/edit?id='+${user.id}}">Edit</a> |
+                            <a th:href="@{'/details?id='+${user.id}}">Details</a> |
+                            <a th:href="@{'/delete?id='+${user.id}}">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <div th:replace="fragments/layout :: footer"></div>
+</body>
+
+</html>

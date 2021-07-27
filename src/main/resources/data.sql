@@ -1,0 +1,1 @@
+REPLACE INTO `user` (user_id, email, first_name, last_name, password) VALUES (0, 'john@smith.com','John','Smith','Password');
